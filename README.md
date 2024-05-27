@@ -1,4 +1,7 @@
 # project-team117
+
+***Please be advised that [the original repo](https://github.com/professor-forward/project-team117) is managed by GitHub Classroom and not allowed to clone / fork, the project actually done on 2022/04/03.***
+
 project-team117 created by GitHub Classroom
 ## Team member
 
