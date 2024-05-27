@@ -1,0 +1,135 @@
+<!---Student name: Shilin Yue-->
+<!---Student number:300048592-->
+<!---Group name: Team 117-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to bookbuy</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <div class="top">
+          <div class="fl">
+              Welcome to 
+              <a href="index.html">Bookbuy</a>!
+              <span class="shop">
+                  &emsp;You have
+                  <a href="index.html">0</a>
+                    items in your cart.
+              </span>
+          </div>
+          <div class="fr">
+              <span class="phone">
+                  <img src="pics/phone.png" width="20" height="20" >
+                  111-222-3333
+              </span>
+              <!---Login and Register might not be implemented Since this is just a demo.-->
+              &emsp;Please&emsp;
+              <a href="index.html" style="color: orange;">Login</a>
+              &emsp;or&emsp;
+              <a href="index.html" style="color: brown;">Register</a>
+          </div>
+      </div>
+
+      <div class="header">
+          <a href="index.html" class="fl"><img src="pics/logo.jpg"></a>
+          <div class="search fl">
+              <input name="search_bar" type="text" class="search_bar fl" placeholder="What do you want today?">
+              <span><img src="pics/search.png" width="45" height="35"></span>
+          </div>
+          <a class="cart fr" href="index.html">My Cart</a>  
+          <div style="clear:both"></div>
+      </div>
+
+      <div class="nav">
+          <ul>
+              <li><a href="index.html" class="current"><span>Home page</span></a></li>
+              <li><a href="index.html"><span>Classics</span></a></li>
+              <li><a href="index.html"><span>Dramas & Plays</span></a></li>
+              <li><a href="index.html"><span>Genre Fiction</span></a></li>
+          </ul>
+          <div style="clear:both"></div>
+      </div>
+
+      <div class="books">
+          <div class="fl">
+              <ul>
+                  <li>
+                      <div class="pic"><a href="index.html" title="The first book"><img src="pics/book1.jpg"></a></div>
+                      <p><a href="index.html">The Adventures of Huckleberry Finn</a></p>
+                      <div>
+                        <span class="price">$59.99</span>
+                      </div>
+                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                      <button onclick="incq1()">Add to cart</button>
+                      <div style="clear:both"></div>
+                  </li>
+                  <li>
+                     <div class="pic"><a href="index.html" title="The second book"><img src="pics/book2.jpg"></a></div>
+                     <p><a href="index.html">Hamlet</a></p>
+                     <div>
+                        <span class="price">$69.99</span>
+                     </div>
+                     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                     <button onclick="incq2()">Add to cart</button>
+                     <div style="clear:both"></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="index.html" title="The third book"><img src="pics/book3.jpg"></a></div>
+                        <p><a href="index.html">War and Peace (Vintage Classics)</a></p>
+                        <div>
+                          <span class="price">$79.99</span>
+                        </div>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <button onclick="incq3()">Add to cart</button>
+                        <div style="clear:both"></div>
+                    </li>
+              </ul>
+          </div>
+          <div style="clear:both"></div>
+      </div>
+      <div class="phpButtom">
+            <ul class="cart2">
+                <li style="list-style: none;">
+                    <span>Your cart:</span>
+                </li>
+                <li>
+                    <span name="book1q" class="q" id="book1q">0</span> <span> The Adventures of Huckleberry Finn</span>
+                </li>
+                <li>
+                    <span name="book2q" class="q" id="book2q">0</span><span> Hamlet</span>
+                </li>
+                <li>
+                    <span name="book3q" class="q" id="book3q">0</span><span> War and Peace.</span>
+                </li>
+            </ul>
+            <p></p>
+            <button onclick="so()" id="so">Submit your order!</button>
+      </div>
+      <script>
+          var book1q = document.getElementById("book1q");
+          var book2q = document.getElementById("book2q");
+          var book3q = document.getElementById("book3q");
+          var q1 = 0;
+          var q2 = 0;
+          var q3 = 0;
+          function incq1(){
+              q1 += 1;
+              book1q.innerHTML = q1;
+          }
+          function incq2(){
+              q2 += 1;
+              book2q.innerHTML = q2;
+          }
+          function incq3(){
+              q3 += 1;
+              book3q.innerHTML = q3;
+          }
+
+          function so(){
+              window.location.href="hw.php?book1q=" + q1 + "&book2q=" + q2 + "&book3q=" + q3;
+          }
+      </script>
+  </body>
+</html>
