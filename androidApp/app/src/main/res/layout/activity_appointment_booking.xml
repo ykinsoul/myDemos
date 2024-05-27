@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Activity.AppointmentBookingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a day:"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/dateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available times for this day are:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/availableTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected date:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/dateSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dateSelect"
+            android:text="select a date" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected time:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timeSelect"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/selectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="select a time" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/confirmRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="confirmRequest"
+            android:text="confirm request" />
+    </LinearLayout>
+
+</RelativeLayout>

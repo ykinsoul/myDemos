@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Activity.CustomerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search for a branch"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textCapWords" />
+
+        <Button
+            android:id="@+id/btnSearchAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="search through address" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Between"
+            android:inputType="date|number|textPersonName" />
+
+        <Button
+            android:id="@+id/btnSearchTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="searchTime"
+            android:text="Search through working hours" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Service Name"
+            android:inputType="textCapWords" />
+
+        <Button
+            android:id="@+id/btnSearchService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="searchService"
+            android:text="search through Services provided" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/viewservices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myServices"
+            android:text="view my requests" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
